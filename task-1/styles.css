@@ -100,6 +100,17 @@ header {
   height: 24px;
 }
 
+#icon-moon,
+#icon-sun {
+  transition: opacity 0.3s ease;
+}
+
+#icon-moon.hidden,
+#icon-sun.hidden {
+  opacity: 0;
+  pointer-events: none; /* Prevent interaction when hidden */
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .navbar {
