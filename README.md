@@ -117,6 +117,15 @@ The front for Task-2 is built using **Next.js** and **TypeScript**. I used tanst
    ```bash
    npm run dev
 
+4. (Optionally) Build the project:
+   ```bash
+   npm run build
+
+5. (Optionally) Start the project:
+   ```bash
+   npm run start
+
+
 The server should now be running. You can access it at a port (e.g., http://localhost:3000 by default).
 
 #### Tech Used
