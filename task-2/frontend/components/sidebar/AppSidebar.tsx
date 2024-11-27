@@ -3,10 +3,9 @@ import {
   SidebarContent,
   SidebarGroup,
   SidebarGroupContent,
-  SidebarHeader,
   SidebarMenu,
   SidebarMenuItem,
-  SidebarRail,
+  SidebarRail
 } from "@/components/ui/sidebar";
 import CreateTaskForm from "../form/CreateTaskForm";
 

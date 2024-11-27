@@ -32,12 +32,20 @@ import { cn } from "@/lib/utils";
 import { CalendarIcon } from "lucide-react";
 
 const formSchema = z.object({
-  title: z.string().min(1, {
-    message: "Title cannot be empty.",
-  }),
-  description: z.string().min(1, {
-    message: "Description cannot be empty.",
-  }),
+  title: z
+    .string()
+    .min(1, {
+      message: "Title cannot be empty.",
+    })
+    .max(24, { message: "Title can only be maximum 24 characters long" }),
+  description: z
+    .string()
+    .min(1, {
+      message: "Description cannot be empty.",
+    })
+    .max(100, {
+      message: "Description can only be maximum 100 characters long",
+    }),
   dueDate: z.string().min(1, {
     message: "A due date is required",
   }),
@@ -93,7 +101,7 @@ export default function CreateTaskForm() {
                 <FormItem>
                   <FormLabel>Title</FormLabel>
                   <FormControl>
-                    <Input placeholder="Wash dishes" {...field} />
+                    <Input placeholder="Task title" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -107,7 +115,7 @@ export default function CreateTaskForm() {
                   <FormLabel>Description</FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder="Write down how you will complete this task"
+                      placeholder="Describe your task"
                       className="resize-none"
                       {...field}
                     />
